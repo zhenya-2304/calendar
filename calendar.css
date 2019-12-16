@@ -1,0 +1,77 @@
+:root{ 
+}
+#calendar{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	height: 50vh;
+	background: #32e832;
+	-webkit-box-shadow: 0.3px 2.3px 7.7px 2px #d2d2d2;
+		box-shadow: 0.3px 2.3px 7.7px 2px #d2d2d2;	
+}
+.year{
+	padding: 10px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.previous, .next{
+	cursor: pointer; 
+	width: 30px;
+	height: 30px;
+	color: #fff;
+}
+.previous::before{
+	content: url(back.svg);
+}
+.next::before{
+	content:url(next.svg);
+}
+.month{
+	width: auto;
+	align-self: center;
+}
+.days{
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap;
+	flex: 1 1 auto;
+	background: #fff;
+}
+.days::after{
+	flex-basis: 100%;
+  	width: 0;
+  	margin: 0;
+}
+.day {
+	display: flex;
+	flex: 1 1 13.2%;
+	max-width: 14.3%;
+	min-height:40px;
+	height: auto;
+	box-shadow: 0.1px 0.1px 0.7px 0.3px #d2d2d2;
+	justify-content: center;
+	align-items: center;
+}
+.work-day {
+	background-color: #0000CD;
+}
+.days-of-week {
+	display: flex;
+	background-color: #d6067d;
+}
+.day-of-week{
+	min-height: 1px;
+	box-shadow: none;
+	color: #ececec;
+}
+#mocha-stats {
+	position: relative!important;
+}
