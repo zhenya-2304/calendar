@@ -78,3 +78,19 @@ describe('getFirstDayOfWeek',function(){
 		assert.equal(getFirstDayOfWeek(6),makeTest(5));
 	});
 });*/
+
+//расширение прототипа Date функцией getDayInMonth()
+describe('получаем количество дней в месяце', function(){
+	it('в декабре 31 день',function(){
+		assert.equal(new Date(2019, 11, 1).numberOfDays(), 31);
+	});
+	it('в январе 31 день',function(){
+		assert.equal(new Date(2020, 0, 1).numberOfDays(), 31);
+	});
+	it('в феврале 29 день',function(){
+		assert.equal(new Date(2020, 1, 1).numberOfDays(), 29);
+	});
+	it('в марте 31 день',function(){
+		assert.equal(new Date(2020,2, 1).numberOfDays(), 31);
+	});
+});
